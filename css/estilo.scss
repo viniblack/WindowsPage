@@ -1,0 +1,102 @@
+$planoFundo: #02807f;
+$barraWindows: #c0c0c0;
+$bordas: #858585;
+$texto: #000000;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $planoFundo;
+  background-image: url("../imagens/tux.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .barraWindows {
+      background-color: $barraWindows;
+      width: calc(100% - 10px);
+      position: fixed;
+      bottom: 0;
+      padding: 5px;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 120px 120px;
+
+      .btnWindows {
+        height: 45px;
+        border: 2px solid $bordas;
+
+        img {
+          height: 100%;
+        }
+      }
+      .relogioWindows {
+        height: 45px;
+        border: 2px solid $bordas;
+
+        .relogio,
+        .data {
+          text-align: center;
+          font-weight: bold;
+          color: $texto;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .icones {
+      width: 20vw;
+      height: calc(100vh - 59px);
+      display: grid;
+      grid-template-columns: repeat(2, calc(50% - 10px));
+      grid-gap: 10px;
+      align-items: center;
+      justify-items: center;
+
+      a {
+        text-decoration: none;
+        color: $texto;
+        text-align: center;
+        img {
+          height: 40%;
+        }
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .conteudo {
+      background: aqua;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
+      top: 50%;
+      left: 50%;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease-out;
+
+      .btnFecha {
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 15px;
+        background-color: red;
+      }
+    }
+  }
+}
