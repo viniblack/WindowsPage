@@ -4,6 +4,13 @@
 	src: url('../fonts/Minecraft.ttf');
 }
 
+#centro{
+
+  display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
 a{
 	color:green;
 	text-decoration:none;
