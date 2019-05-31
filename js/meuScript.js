@@ -19,7 +19,7 @@ function relogio() {
   mostraDia.textContent = dataFormatada;
 }
 relogio();
-setInterval(relogio, 60000);
+setInterval(relogio, 30000);
 
 //mostra as janelas de conteúdo
 function mostraConteudo(janela) {
